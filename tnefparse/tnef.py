@@ -93,7 +93,7 @@ class TNEFAttachment(object):
             break
 
       if attr is not None:
-         fn = attr.data[0].strip('\0')
+         fn = attr.data[0].replace('\0','')
       else:
          fn = self.name
 
